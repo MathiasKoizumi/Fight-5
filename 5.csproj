@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectGuid>{60BA1AFC-E530-431B-9D11-BC6D5A277845}</ProjectGuid>
@@ -67,15 +67,6 @@
     <Compile Include="WindowsFormsApplication1\Tegneserie.cs" />
     <Compile Include="WindowsFormsApplication1\Token.cs" />
     <Compile Include="WindowsFormsApplication1\Vanskning.cs" />
-    <Compile Include="WMPLib\IWMPControls.cs" />
-    <Compile Include="WMPLib\IWMPCore.cs" />
-    <Compile Include="WMPLib\IWMPCore2.cs" />
-    <Compile Include="WMPLib\IWMPCore3.cs" />
-    <Compile Include="WMPLib\IWMPPlayer4.cs" />
-    <Compile Include="WMPLib\WindowsMediaPlayer.cs" />
-    <Compile Include="WMPLib\WMPPlayState.cs" />
-    <Compile Include="WMPLib\_WMPOCXEvents.cs" />
-    <Compile Include="WMPLib\_WMPOCXEvents_Event.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="WindowsFormsApplication1\Form1.resx" />
@@ -91,6 +82,17 @@
     <EmbeddedResource Include="WindowsFormsApplication1\Resources.Sirius-Extinct.mp3" />
     <EmbeddedResource Include="WindowsFormsApplication1\Resources.WhiteRiver.mp3" />
     <EmbeddedResource Include="WindowsFormsApplication1\Resources.world.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
